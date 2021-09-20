@@ -1,0 +1,19 @@
+#naslovnica {
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+  height: 100vh;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $textColor;
+  font-family: "Open Sans Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+}

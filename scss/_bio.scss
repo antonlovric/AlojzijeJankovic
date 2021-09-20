@@ -1,0 +1,130 @@
+.okvirZaSlike {
+  height: 500px;
+  width: 550px;
+  object-fit: fill;
+  position: relative;
+  grid-area: fotografije;
+  overflow: hidden;
+}
+
+.opis {
+  grid-area: opis;
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.7;
+}
+
+.prvaFotografija {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.drugaFotografija {
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pretinac {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "opis fotografije";
+  margin: auto;
+  width: 80%;
+  margin-top: 90px;
+}
+
+body {
+  position: relative;
+}
+
+.podrucjeUspjeha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 90px;
+  margin-bottom: 100px;
+}
+
+.uspjesi {
+  h2 {
+    text-align: center;
+    margin: 40px;
+  }
+}
+
+.pretinacUspjeha {
+  display: grid;
+  grid-template-columns: 0.3fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "fotografija tekst";
+  gap: 40px;
+  img {
+    grid-area: fotografija;
+  }
+  ul {
+    grid-area: tekst;
+    width: 40rem;
+    li {
+      margin: 20px;
+      line-height: 1.5;
+    }
+  }
+}
+.pretinacUspjehaInverz {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "tekst fotografija";
+  gap: 40px;
+  img {
+    grid-area: fotografija;
+  }
+  ul {
+    grid-area: tekst;
+    li {
+      margin: 20px;
+    }
+  }
+}
+.fotografijaUspjeha {
+  width: 400px;
+  height: 400px;
+}
+
+.promjenaPrethodna {
+  animation: promjenaPrethodneFotografije 2s ease-in-out normal forwards;
+}
+
+.promjenaIduca {
+  animation: promjenaIduceFotografije 2s ease-in-out normal forwards;
+}
+
+@keyframes promjenaPrethodneFotografije {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes promjenaIduceFotografije {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0%;
+  }
+}

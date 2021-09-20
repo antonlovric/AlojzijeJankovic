@@ -1,0 +1,19 @@
+@import "./_resets.scss", "./_variables.scss", "./_naslovnica.scss",
+  "./_bio.scss", "./_navigacija.scss", "./_ploca.scss";
+a {
+  text-decoration: none;
+  color: #e7e7e7;
+}
+body {
+  overflow-x: hidden;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
