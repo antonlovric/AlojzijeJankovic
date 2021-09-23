@@ -2,7 +2,13 @@ import { rotirajIkonu } from "./modules/funkcionalnostIzbornika.js";
 
 import { promijeniFotografiju } from "./modules/galerijaFotografija.js";
 
-import { napuniTablicu } from "./modules/kontrolaPloce.js";
+import {
+  inicijalizirajPlocu,
+  dohvatiPartije,
+  inicijalizirajTablicu,
+  napuniTablicu,
+  odaberiPartiju,
+} from "./modules/kontrolaPloce.js";
 
 if (document.querySelector(".ikonaNavigacije") != null) {
   let prikazanaNavigacija = false;
@@ -25,29 +31,5 @@ if (document.querySelector(".okvirZaSlike") != null) {
 }
 
 if (document.querySelector("#ploca") != null) {
-  // const ploca = document.querySelector("#ploca");
-  let abChess = {};
-  let opcije = {
-    animated: false,
-  };
-  abChess = new AbChess("ploca", opcije);
-  abChess.setFEN();
-  let games = [];
-  $.get("../misc/master_games.pgn", function (data) {
-    games = data.split("¤");
-    abChess.setPGN(games[0]);
-    // console.log(games[0]);
-    // games.forEach((partija) => {
-    //   let dijeloviPartije = partija.split("]");
-    //   console.log(dijeloviPartije[0]);
-    // });
-    // console.log(abChess.getInfo("White"));
-    napuniTablicu(games);
-  });
+  inicijalizirajPlocu();
 }
-
-$(document).ready(function () {
-  $("#tablica").DataTable({
-    select: true,
-  });
-});

@@ -1,16 +1,59 @@
-#ploca {
-  width: 420px;
-  height: 420px;
-}
-
 .pretinacPloce {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 500px;
+  flex-direction: column;
+}
+
+.prostorZaTablicu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4em;
 }
 
 #tablica {
   width: 80%;
+  border-collapse: collapse;
+  margin-top: 60px;
+  :first-child {
+    border-top: 1px solid gray;
+  }
+  tr {
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+  }
+  td {
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+.navigacijaKrozPartiju {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oznacenaPartija {
+  background-color: #e0e0e0;
+}
+
+.neoznacenaPartija {
+  background-color: none;
+}
+
+.trenutnaPartija {
+  text-align: center;
+}
+
+.odabranaPartija {
+  background-color: #e0e0e0;
 }

@@ -8,34 +8,24 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/AbChess-0.3.0.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="../scripts/AbChess-0.3.0.js" defer></script>
+
     <script
       type="module"
       src="../scripts/modules/funkcionalnostIzbornika.js"
       defer
     ></script>
-
+    <script src="../scripts/AbChess-0.3.0-min.js" defer></script>
     <script type="module" src="../scripts/modules/kontrolaPloce.js"></script>
     <script type="module" src="../scripts/script.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/v/dt/dt-1.11.2/sl-1.3.3/datatables.min.css"
-    />
 
-    <script
-      type="text/javascript"
-      src="https://cdn.datatables.net/v/dt/dt-1.11.2/sl-1.3.3/datatables.min.js"
-      defer
-    ></script>
-    <link rel="stylesheet" href="../styles/AbChess-0.3.0.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
     <title>Alojzije Janković</title>
   </head>
   <body>
@@ -49,26 +39,37 @@
     <img class="ikonaNavigacije" src="../images/menu.svg" />
     <section id="pregledPartija">
       <h1>Pregledaj partije Alojzija Jankovića</h1>
-      <table id="tablica">
-        <thead>
-          <tr>
-            <th>Bijeli</th>
-            <th>Crni</th>
-            <th>Naziv turnira</th>
-            <th>Datum</th>
-            <th>Rezultat</th>
-          </tr>
-        </thead>
-        <tbody id="sadrzajTablice"></tbody>
-      </table>
+      <div class="prostorZaTablicu">
+        <table id="tablica">
+          <thead>
+            <tr>
+              <th>Redni Broj</th>
+              <th>Bijeli</th>
+              <th>Crni</th>
+              <th>Naziv turnira</th>
+              <th>Datum</th>
+              <th>Rezultat</th>
+            </tr>
+          </thead>
+          <tbody id="sadrzajTablice"></tbody>
+        </table>
+        <div class="navigacijaPoTablici">
+          <button class="prethodnaStranica">&lt;&lt;</button>
+          <button class="iducaStranica">&gt;&gt;</button>
+          <p class="brojStranice"></p>
+        </div>
+      </div>
+
       <div class="pretinacPloce">
         <div id="ploca"></div>
-      </div>
-      <div class="navigacija">
-        <button id="prviPotez">&lt;&lt;</button>
-        <button id="prosliPotez">&lt;</button>
-        <button id="iduciPotez">&gt;</button>
-        <button id="zadnjiPotez">&gt;&gt;</button>
+
+        <p class="trenutnaPartija"></p>
+        <div class="navigacijaKrozPartiju">
+          <button id="prviPotez">&lt;&lt;</button>
+          <button id="prethodniPotez">&lt;</button>
+          <button id="iduciPotez">&gt;</button>
+          <button id="posljednjiPotez">&gt;&gt;</button>
+        </div>
       </div>
     </section>
     <footer>Copyright Anton Lovrić, 2021. &copy;</footer>

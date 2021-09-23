@@ -372,11 +372,6 @@ body {
   }
 }
 
-#ploca {
-  width: 420px;
-  height: 420px;
-}
-
 .pretinacPloce {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,8 +382,81 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 500px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.prostorZaTablicu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4em;
+}
+
+#tablica {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 60px;
+}
+
+#tablica :first-child {
+  border-top: 1px solid gray;
+}
+
+#tablica tr {
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+#tablica td {
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+.navigacijaKrozPartiju {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.oznacenaPartija {
+  background-color: #e0e0e0;
+}
+
+.neoznacenaPartija {
+  background-color: none;
+}
+
+.trenutnaPartija {
+  text-align: center;
+}
+
+.odabranaPartija {
+  background-color: #e0e0e0;
 }
 
 a {
@@ -401,8 +469,9 @@ body {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
+  margin-top: 100px;
   text-align: center;
   width: 100%;
 }
@@ -410,4 +479,3 @@ footer {
 h1 {
   text-align: center;
 }
-/*# sourceMappingURL=main.css.map */
