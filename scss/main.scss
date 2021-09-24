@@ -1,5 +1,7 @@
 @import "./_resets.scss", "./_variables.scss", "./_naslovnica.scss",
   "./_bio.scss", "./_navigacija.scss", "./_ploca.scss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 a {
   text-decoration: none;
   color: #e7e7e7;
@@ -8,13 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
-}
 h1 {
   text-align: center;
 }

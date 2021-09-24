@@ -5,16 +5,25 @@
   position: relative;
   grid-area: fotografije;
   overflow: hidden;
+  outline: black 5px solid;
+  border-radius: 10px;
 }
 
 .opis {
   grid-area: opis;
+  padding: 40px;
   width: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 1.2rem;
   line-height: 1.7;
+  color: #343f40;
+
+  background: #90c3c8;
+  border: 5px solid black;
+  border-radius: 10px;
 }
 
 .prvaFotografija {
@@ -43,8 +52,14 @@
   margin-top: 90px;
 }
 
+.pozadinaBio {
+  background-color: #474554;
+  color: white;
+}
+
 body {
   position: relative;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .podrucjeUspjeha {
@@ -58,14 +73,21 @@ body {
 }
 
 .uspjesi {
+  width: 80%;
+  box-shadow: 5px -5px 2px #90c3c8;
   h2 {
     text-align: center;
     margin: 40px;
   }
 }
 
+.uspjehInverz {
+  box-shadow: -5px -5px 2px #90c3c8;
+}
+
 .pretinacUspjeha {
   display: grid;
+  padding: 50px;
   grid-template-columns: 0.3fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: "fotografija tekst";
@@ -77,6 +99,7 @@ body {
     grid-area: tekst;
     width: 40rem;
     li {
+      font-size: 1.5rem;
       margin: 20px;
       line-height: 1.5;
     }
@@ -84,6 +107,7 @@ body {
 }
 .pretinacUspjehaInverz {
   display: grid;
+  padding: 50px;
   grid-template-columns: 1fr 0.3fr;
   grid-template-rows: 1fr;
   grid-template-areas: "tekst fotografija";
@@ -94,7 +118,9 @@ body {
   ul {
     grid-area: tekst;
     li {
+      font-size: 1.5rem;
       margin: 20px;
+      line-height: 1.5;
     }
   }
 }
@@ -126,5 +152,54 @@ body {
   }
   to {
     right: 0%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .opis {
+    width: 400px;
+    height: 400px;
+    font-size: 1rem;
+  }
+  .pretinac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .okvirZaSlike {
+    width: 400px;
+    height: 400px;
+  }
+  .pretinacUspjeha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      width: 350px;
+      height: auto;
+    }
+    ul {
+      li {
+        font-size: 1.1rem;
+        width: 22rem;
+      }
+    }
+  }
+
+  .pretinacUspjehaInverz {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    img {
+      width: 350px;
+      height: auto;
+    }
+    ul {
+      li {
+        font-size: 1.1rem;
+      }
+    }
   }
 }

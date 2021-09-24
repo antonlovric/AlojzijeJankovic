@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,7 +9,7 @@
 }
 
 #naslovnica {
-  height: 100vh;
+  height: 100%;
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,6 +36,31 @@
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  margin-top: 150px;
+}
+
+#naslovnica nav a {
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#naslovnica nav a:hover {
+  background-color: #b8b6b4;
+  color: black;
+}
+
+.naslov {
+  font-size: 8rem;
+}
+
+.podnaslov {
+  font-size: 4rem;
+}
+
+body {
+  height: 100vh;
 }
 
 .okvirZaSlike {
@@ -46,12 +73,15 @@
   -ms-grid-column: 2;
   grid-area: fotografije;
   overflow: hidden;
+  outline: black 5px solid;
+  border-radius: 10px;
 }
 
 .opis {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: opis;
+  padding: 40px;
   width: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,7 +96,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 1.2rem;
   line-height: 1.7;
+  color: #343f40;
+  background: #90c3c8;
+  border: 5px solid black;
+  border-radius: 10px;
 }
 
 .prvaFotografija {
@@ -98,8 +133,14 @@
   margin-top: 90px;
 }
 
+.pozadinaBio {
+  background-color: #474554;
+  color: white;
+}
+
 body {
   position: relative;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .podrucjeUspjeha {
@@ -121,14 +162,26 @@ body {
   margin-bottom: 100px;
 }
 
+.uspjesi {
+  width: 80%;
+  -webkit-box-shadow: 5px -5px 2px #90c3c8;
+          box-shadow: 5px -5px 2px #90c3c8;
+}
+
 .uspjesi h2 {
   text-align: center;
   margin: 40px;
 }
 
+.uspjehInverz {
+  -webkit-box-shadow: -5px -5px 2px #90c3c8;
+          box-shadow: -5px -5px 2px #90c3c8;
+}
+
 .pretinacUspjeha {
   display: -ms-grid;
   display: grid;
+  padding: 50px;
   -ms-grid-columns: 0.3fr 2fr;
       grid-template-columns: 0.3fr 2fr;
   -ms-grid-rows: 1fr;
@@ -151,6 +204,7 @@ body {
 }
 
 .pretinacUspjeha ul li {
+  font-size: 1.5rem;
   margin: 20px;
   line-height: 1.5;
 }
@@ -158,6 +212,7 @@ body {
 .pretinacUspjehaInverz {
   display: -ms-grid;
   display: grid;
+  padding: 50px;
   -ms-grid-columns: 1fr 0.3fr;
       grid-template-columns: 1fr 0.3fr;
   -ms-grid-rows: 1fr;
@@ -179,7 +234,9 @@ body {
 }
 
 .pretinacUspjehaInverz ul li {
+  font-size: 1.5rem;
   margin: 20px;
+  line-height: 1.5;
 }
 
 .fotografijaUspjeha {
@@ -230,6 +287,73 @@ body {
   }
   to {
     right: 0%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .opis {
+    width: 400px;
+    height: 400px;
+    font-size: 1rem;
+  }
+  .pretinac {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+  }
+  .okvirZaSlike {
+    width: 400px;
+    height: 400px;
+  }
+  .pretinacUspjeha {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pretinacUspjeha img {
+    width: 350px;
+    height: auto;
+  }
+  .pretinacUspjeha ul li {
+    font-size: 1.1rem;
+    width: 22rem;
+  }
+  .pretinacUspjehaInverz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pretinacUspjehaInverz img {
+    width: 350px;
+    height: auto;
+  }
+  .pretinacUspjehaInverz ul li {
+    font-size: 1.1rem;
   }
 }
 
@@ -459,6 +583,14 @@ button {
   background-color: #e0e0e0;
 }
 
+footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: #e7e7e7;
@@ -466,14 +598,6 @@ a {
 
 body {
   overflow-x: hidden;
-}
-
-footer {
-  position: relative;
-  bottom: 0;
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
 }
 
 h1 {

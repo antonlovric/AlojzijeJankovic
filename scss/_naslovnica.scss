@@ -1,6 +1,6 @@
 #naslovnica {
   @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
-  height: 100vh;
+  height: 100%;
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,5 +15,29 @@
   nav {
     display: flex;
     gap: 30px;
+    margin-top: 150px;
+
+    a {
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+    }
+
+    a:hover {
+      background-color: #b8b6b4;
+      color: black;
+    }
   }
+}
+
+.naslov {
+  font-size: 8rem;
+}
+
+.podnaslov {
+  font-size: 4rem;
+}
+
+body {
+  height: 100vh;
 }
