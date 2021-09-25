@@ -29,3 +29,10 @@ if (document.querySelector("#ploca") != null) {
     funkcije.inicijalizirajPlocu();
   });
 }
+
+if (document.querySelector(".avatar") != null) {
+  let uveziIz = "./modules/generiranjeCitata.js";
+  import(uveziIz).then((funkcije) => {
+    funkcije.inicijalizirajPlocu();
+  });
+}

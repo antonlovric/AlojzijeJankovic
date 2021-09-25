@@ -591,6 +591,14 @@ footer {
   width: 100%;
 }
 
+#generatorCitata {
+  text-align: center;
+}
+
+.avatar {
+  width: 400px;
+}
+
 a {
   text-decoration: none;
   color: #e7e7e7;
