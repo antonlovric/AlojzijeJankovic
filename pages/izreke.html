@@ -13,6 +13,13 @@
       type="module"
       src="../scripts/modules/funkcionalnostIzbornika.js"
     ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+    defer
+  ></script>
+
     <script type="module" src="../scripts/script.js" defer></script>
     <title>Alojzije Janković</title>
   </head>
@@ -21,11 +28,11 @@
       <a href="index.html" class="linkNavigacije">Naslovnica</a>
       <a href="bio.html" class="linkNavigacije">O Alojziju Jankoviću</a>
       <a href="#pregledPartija" class="linkNavigacije">Pregled Partija</a>
-      <a href="#generatorCitata" class="linkNavigacije">Generator Citata</a>
+      <a href="#generatorCitata" class="linkNavigacije">Izreke</a>
     </nav>
     <img class="ikonaNavigacije" src="../images/menu.svg" />
-    <section id="generatorCitata">
-      <h1 class="naslov">Poruka Dana</h1>
+    <section id="generatorIzreka">
+      <h1 class="naslov">Izreka Dana</h1>
       <p class="opisCitati">
         Pozdrav! Ja sam Anton, kreator ove stranice. Velemajstor Janković
         svakodnevno u svojim videozapisima izgovara različite izreke, krilatice
@@ -36,9 +43,9 @@
         <img src="../images/avatarSjetio.png" alt="avatar" class="avatar" />
         <p class="tekstAvatar"></p>
       </div>
-      <div class="pretinacCitata">
-        <button id="generirajCitat">Generiraj</button>
-        <p id="citat"></p>
+      <div class="pretinacIzreke">
+        <button id="generirajIzreku">Generiraj</button>
+        <p id="izreka"></p>
       </div>
     </section>
     <footer>Copyright Anton Lovrić, 2021. &copy;</footer>

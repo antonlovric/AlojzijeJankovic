@@ -33,6 +33,6 @@ if (document.querySelector("#ploca") != null) {
 if (document.querySelector(".avatar") != null) {
   let uveziIz = "./modules/generiranjeCitata.js";
   import(uveziIz).then((funkcije) => {
-    funkcije.inicijalizirajPlocu();
+    funkcije.inicijalizirajDogadaje();
   });
 }
