@@ -1,15 +1,8 @@
-@import "./_resets.scss", "./_variables.scss", "./_naslovnica.scss",
-  "./_bio.scss", "./_navigacija.scss", "./_ploca.scss", "./_izreke.scss";
+@use "./resets";
+@use "./naslovnica";
+@use "./bio";
+@use "./ploca";
+@use "./izreke";
+@use "./navigacija";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
-a {
-  text-decoration: none;
-  color: #e7e7e7;
-}
-body {
-  overflow-x: hidden;
-}
-
-h1 {
-  text-align: center;
-}

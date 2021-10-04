@@ -1,8 +1,42 @@
+@use "./variables" as *;
+
+body {
+  position: relative;
+}
+
+#pregledPartija {
+  background-color: $bojaPozadine;
+  color: $bojaTekstaSvijetla;
+  position: relative;
+}
+
+.uvodPregleda {
+  width: 50rem;
+  font-size: 18px;
+}
+
+.pretinacTeksta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
 .pretinacPloce {
+  h2 {
+    margin-bottom: 1em;
+  }
+  margin-top: 3em;
+  padding-bottom: 6em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.naslovPregleda {
+  font-size: 50px;
+  margin-bottom: 100px;
 }
 
 .prostorZaTablicu {
@@ -10,20 +44,36 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 4em;
 }
 
+.strane {
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  background-color: $bojaPozadineUspjeh;
+}
+
+.lijevaStrana {
+  left: 0;
+}
+
+.desnaStrana {
+  right: 0;
+}
 #tablica {
-  width: 80%;
+  width: 65%;
   border-collapse: collapse;
   margin-top: 60px;
+  background-color: $bojaPozadineUspjeh;
+  color: $bojaTekstaTamna;
   :first-child {
-    border-top: 1px solid gray;
+    border-top: 2px solid $bojaTekstaTamna;
   }
   tr {
-    border-bottom: 1px solid gray;
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
+    border-bottom: 2px solid $bojaTekstaTamna;
+    border-right: 2px solid $bojaTekstaTamna;
+    border-left: 2px solid $bojaTekstaTamna;
+    transition: 0.1s ease-out;
   }
   td {
     padding: 5px;
@@ -59,9 +109,9 @@ button {
 }
 
 footer {
+  background-color: $bojaPozadineUspjeh;
   position: relative;
   bottom: 0;
-  margin-top: 100px;
   text-align: center;
   width: 100%;
 }

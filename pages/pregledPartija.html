@@ -29,6 +29,7 @@
     <title>Alojzije Janković</title>
   </head>
   <body>
+
     <nav class="izbornik">
       <a href="#naslovnica" class="linkNavigacije">Naslovnica</a>
       <a href="bio.html" class="linkNavigacije">O Alojziju Jankoviću</a>
@@ -37,9 +38,29 @@
     </nav>
 
     <img class="ikonaNavigacije" src="../images/menu.svg" />
+    <header class="navigacijaZaglavlje">
+      <!-- <span class="naslovStranice">Alojzije Janković</span> -->
+      <img src="../images/Alojzije Janković-logos_transparent.png" alt="">
+      <span class="navigacijskiLinkovi">
+        
+      <a href="index.html" class="linkNavigacije">Naslovnica</a>
+      <a href="bio.html" class="linkNavigacije">O Alojziju Jankoviću</a>
+      <a href="pregledPartija.html" class="linkNavigacije">Pregled Partija</a>
+      <a href="izreke.html" class="linkNavigacije">Izreke</a>
+      </span>
+  
+    </header>
     <section id="pregledPartija">
-      <h1>Pregledaj partije Alojzija Jankovića</h1>
+
+      <h1 class="naslovPregleda">Pregledajte partije Alojzija Jankovića</h1>
+      <div class="pretinacTeksta">
+        <p class="uvodPregleda">Na ovoj stranici je omogućen pregled izabranih 25 velemajstorskih partija Alojzija Jankovića. Prikupljene su partije iz brojnih turnira u kojima je igrao velemajstor Janković i možete ih odabrati u tablici ispod. Kliknite na partiju i koristite navigacijske gumbe ispod ploče kako biste prošli kroz odigrane poteze.</p>
+      </div>
+      
+      
+
       <div class="prostorZaTablicu">
+        <h2>Kolekcija Partija</h2>
         <table id="tablica">
           <thead>
             <tr>
@@ -59,8 +80,8 @@
           <p class="brojStranice"></p>
         </div>
       </div>
-
       <div class="pretinacPloce">
+        <h2>Ploča za pregled partije</h2>
         <div id="ploca"></div>
 
         <p class="trenutnaPartija"></p>

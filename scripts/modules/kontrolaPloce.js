@@ -162,7 +162,7 @@ function odaberiPartiju(object) {
     partija.bijeli +
     " - " +
     partija.crni +
-    "(" +
+    " (" +
     partija.rezultat +
     ")";
   paragraf.innerHTML = tekst;

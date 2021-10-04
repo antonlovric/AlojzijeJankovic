@@ -1,10 +1,11 @@
+@use "./variables" as *;
 #naslovnica {
   @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
   height: 100%;
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  color: $textColor;
+  color: $bojaTekstaSvijetla;
   font-family: "Open Sans Condensed", sans-serif;
   display: flex;
   flex-direction: column;
@@ -12,12 +13,16 @@
   align-items: center;
   font-size: 3.5rem;
 
-  nav {
+  .navigacija {
     display: flex;
+    justify-content: space-around;
     gap: 30px;
-    margin-top: 150px;
-
+    margin-top: 2em;
     a {
+      background-color: #292827;
+      text-decoration: none;
+      color: $bojaTekstaSvijetla;
+      font-size: 30px;
       padding: 15px;
       border-radius: 10px;
       transition: 0.3s ease-in-out;
@@ -40,4 +45,27 @@
 
 body {
   height: 100vh;
+}
+
+@media (max-width: $maliUredaji) {
+  .naslov {
+    font-size: 4rem;
+  }
+
+  .podnaslov {
+    font-size: 2rem;
+  }
+  #naslovnica {
+    .navigacija {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 1em;
+      a {
+        text-align: center;
+        font-size: 17px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
 }

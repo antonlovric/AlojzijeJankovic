@@ -1,7 +1,22 @@
+@use "./variables" as *;
 #generatorIzreka {
+  color: $bojaTekstaSvijetla;
   text-align: center;
+  background-color: $bojaPozadine;
+  h1 {
+    font-size: 3.125rem;
+    margin-bottom: 1em;
+  }
+}
+
+.opisCitati {
+  font-size: 1.3rem;
+  width: 50rem;
+  margin: auto;
+  text-align: justify;
+  margin-bottom: 0.7em;
 }
 
 .avatar {
-  width: 400px;
+  width: 350px;
 }
