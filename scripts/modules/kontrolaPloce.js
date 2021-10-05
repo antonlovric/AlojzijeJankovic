@@ -45,40 +45,21 @@ function osvjeziGumbeTablice() {
 }
 
 function prikazStraniceTablice(broj) {
-  console.log(broj);
-  switch (broj) {
-    case 1: {
-      for (let i = 1; i < 11; i++) {
-        tablica[i].style.display = "table-row";
-      }
-      for (let i = 11; i < tablica.length; i++) {
-        tablica[i].style.display = "none";
-      }
-      break;
-    }
+  const ukupniBrojStranica = svePartije.length;
+  const prikazBrojaStranice = document.querySelector(".brojStranice");
+  prikazBrojaStranice.innerHTML =
+    brojStranice + " / " + Math.round(ukupniBrojStranica / 10);
+  let zadnjaPrikazanaPartija = brojStranice * 10;
+  let prvaPrikazanaPartija = zadnjaPrikazanaPartija - 9;
 
-    case 2: {
-      console.log(2);
-      for (let i = 1; i < 11; i++) {
-        tablica[i].style.display = "none";
-      }
-      for (let i = 11; i < 21; i++) {
-        tablica[i].style.display = "table-row";
-      }
-      for (let i = 21; i < tablica.length; i++) {
-        tablica[i].style.display = "none";
-      }
-      break;
-    }
-    case 3: {
-      for (let i = 1; i < 22; i++) {
-        tablica[i].style.display = "none";
-      }
-      for (let i = 21; i < tablica.length; i++) {
-        tablica[i].style.display = "table-row";
-      }
+  for (let i = 0; i < tablica.length; i++) {
+    if (i < prvaPrikazanaPartija || i > zadnjaPrikazanaPartija) {
+      tablica[i].style.display = "none";
+    } else {
+      tablica[i].style.display = "table-row";
     }
   }
+  tablica[0].style.display = "table-row";
   osvjeziGumbeTablice();
 }
 
@@ -172,6 +153,7 @@ function odaberiPartiju(object) {
   osvjeziGumbe();
   osvjeziPlocu();
   brojPoteza = abChess.getMovesPGN().length;
+  document.querySelector(".tekstIznadPloce").scrollIntoView();
 }
 
 function napuniTablicu(partije) {
