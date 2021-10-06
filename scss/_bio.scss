@@ -215,36 +215,74 @@
 
 @media (max-width: $maliUredaji) {
   .okvirZaSlike {
-    height: 300px;
-    width: 350px;
+    height: 250px;
+    width: 300px;
   }
 
   .opis {
     grid-area: opis;
     padding: 40px;
-    width: 25rem;
+    width: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.7;
-    color: $bojaTekstaTamna;
-
-    background: $bojaPozadineUspjeh;
-    border-radius: 10px;
   }
 
   .uspjesi {
-    padding: 30px;
+    padding: 20px;
     margin: auto;
     ul {
       li {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
+        width: 70vw;
       }
     }
     img {
       width: 250px;
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: $srednjiUredaji) {
+  .okvirZaSlike {
+    height: 350px;
+    width: 400px;
+  }
+
+  .opis {
+    grid-area: opis;
+    padding: 50px;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .uspjesi {
+    padding: 20px;
+
+    ul {
+      li {
+        font-size: 1.2rem;
+        width: 70vw;
+      }
+    }
+    img {
+      width: 450px;
+      margin: auto;
+      &:first-child {
+        width: 300px;
+      }
+    }
+    #trecaFotografijaUspjeha {
+      width: 450px;
     }
   }
 }

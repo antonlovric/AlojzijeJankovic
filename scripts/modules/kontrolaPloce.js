@@ -7,6 +7,10 @@ let opcije = {
   draggable: false,
   width: 480,
 };
+
+if (screen.width <= 768) {
+  opcije.width = 320;
+}
 let potez = 0;
 let brojPoteza;
 

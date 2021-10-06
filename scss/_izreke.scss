@@ -31,6 +31,7 @@
   width: 50rem;
   margin-bottom: 0.7em;
   margin: auto;
+  text-align: center;
 }
 
 #izreka {
@@ -40,4 +41,35 @@
   width: 50rem;
   margin: auto;
   margin-bottom: 0.7em;
+}
+
+@media (max-width: $maliUredaji) {
+  .opisCitati {
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    font-size: 1.2rem;
+    width: 80vw;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 0.7em;
+  }
+  .avatar {
+    width: 350px;
+  }
+
+  .pretinacIzreke {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3em;
+    p {
+      width: 100%;
+      font-size: 1.1rem;
+    }
+    #izreka {
+      width: 100%;
+      font-size: 1.1rem;
+    }
+  }
 }
