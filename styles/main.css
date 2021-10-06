@@ -60,9 +60,16 @@ body {
   }
 
   .podnaslov {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
+  #naslovnica {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   #naslovnica .navigacija {
     flex-direction: column;
     gap: 15px;
@@ -70,28 +77,46 @@ body {
   }
   #naslovnica .navigacija a {
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 5px;
   }
+  #naslovnica .navigacija a:focus-within {
+    background-color: #b8b6b4;
+    color: black;
+  }
 }
-body {
-  position: relative;
-  font-family: "Lato", sans-serif;
-  overflow-x: hidden;
-}
+@media (max-width: 768px) {
+  .naslov {
+    font-size: 5rem;
+  }
 
-.onemoguciScroll {
-  overflow-y: hidden;
-  height: 100vh;
-}
+  .podnaslov {
+    font-size: 3rem;
+  }
 
-h1 {
-  text-align: center;
-  font-size: 3.125rem;
-  font-family: "Open Sans Condensed", sans-serif;
+  #naslovnica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #naslovnica .navigacija {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 2em;
+  }
+  #naslovnica .navigacija a {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  #naslovnica .navigacija a:focus-within {
+    background-color: #b8b6b4;
+    color: black;
+  }
 }
-
 .okvirZaSlike {
   height: 500px;
   width: 550px;
@@ -221,45 +246,6 @@ h1 {
   line-height: 1.5;
 }
 
-.navigacijaZaglavlje {
-  border-bottom: 2px solid black;
-  width: 100%;
-  z-index: 100;
-  background-color: #b3b3b3;
-  position: sticky;
-  display: flex;
-  align-items: center;
-  height: 70px;
-  color: black;
-}
-.navigacijaZaglavlje .poveznicaNaFotografiji {
-  position: absolute;
-  left: 10px;
-  height: 150px;
-}
-.navigacijaZaglavlje img {
-  position: absolute;
-  left: 10px;
-  height: 150px;
-}
-.navigacijaZaglavlje .navigacijskiLinkovi {
-  position: absolute;
-  right: 20px;
-}
-.navigacijaZaglavlje .navigacijskiLinkovi a {
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-  border-radius: 5px;
-  transition: 0.2s ease-out;
-  margin: 10px;
-  font-size: 20px;
-}
-.navigacijaZaglavlje .navigacijskiLinkovi a:hover {
-  background-color: #5a5a5a;
-  color: #e0e0e0;
-}
-
 .fotografijaUspjeha {
   width: 400px;
   height: 400px;
@@ -336,10 +322,38 @@ h1 {
     font-size: 1.1rem;
   }
 }
-body {
-  position: relative;
-}
+@media (max-width: 576px) {
+  .okvirZaSlike {
+    height: 300px;
+    width: 350px;
+  }
 
+  .opis {
+    grid-area: opis;
+    padding: 40px;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: black;
+    background: #b3b3b3;
+    border-radius: 10px;
+  }
+
+  .uspjesi {
+    padding: 30px;
+    margin: auto;
+  }
+  .uspjesi ul li {
+    font-size: 0.95rem;
+  }
+  .uspjesi img {
+    width: 250px;
+  }
+}
 #pregledPartija {
   background-color: #5a5a5a;
   color: #e0e0e0;
@@ -347,8 +361,10 @@ body {
 }
 
 .uvodPregleda {
-  width: 50rem;
-  font-size: 18px;
+  width: 60rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  line-height: 1.5;
 }
 
 .pretinacTeksta {
@@ -389,14 +405,6 @@ body {
   background-color: #b3b3b3;
 }
 
-.lijevaStrana {
-  left: 0;
-}
-
-.desnaStrana {
-  right: 0;
-}
-
 #tablica {
   width: 65%;
   border-collapse: collapse;
@@ -416,6 +424,7 @@ body {
 #tablica td {
   padding: 5px;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 button {
@@ -457,6 +466,7 @@ footer {
   color: #e0e0e0;
   text-align: center;
   background-color: #5a5a5a;
+  height: 100%;
 }
 #generatorIzreka h1 {
   font-size: 3.125rem;
@@ -464,6 +474,8 @@ footer {
 }
 
 .opisCitati {
+  line-height: 1.5;
+  letter-spacing: 0.4px;
   font-size: 1.3rem;
   width: 50rem;
   margin: auto;
@@ -472,7 +484,64 @@ footer {
 }
 
 .avatar {
-  width: 350px;
+  width: 450px;
+}
+
+.tekstAvatar {
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  font-size: 1.6rem;
+  width: 50rem;
+  margin-bottom: 0.7em;
+  margin: auto;
+}
+
+#izreka {
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  font-size: 1.3rem;
+  width: 50rem;
+  margin: auto;
+  margin-bottom: 0.7em;
+}
+
+.navigacijaZaglavlje {
+  border-bottom: 2px solid black;
+  width: 100%;
+  z-index: 100;
+  background-color: #b3b3b3;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  color: black;
+}
+.navigacijaZaglavlje .poveznicaNaFotografiji {
+  position: absolute;
+  left: 10px;
+  height: 150px;
+}
+.navigacijaZaglavlje img {
+  position: absolute;
+  left: 10px;
+  height: 150px;
+}
+.navigacijaZaglavlje .navigacijskiLinkovi {
+  position: absolute;
+  right: 20px;
+}
+.navigacijaZaglavlje .navigacijskiLinkovi a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  transition: 0.2s ease-out;
+  margin: 10px;
+  font-size: 20px;
+}
+.navigacijaZaglavlje .navigacijskiLinkovi a:hover {
+  background-color: #5a5a5a;
+  color: #e0e0e0;
 }
 
 .izbornik {
@@ -552,6 +621,27 @@ footer {
   to {
     transform: rotate(180deg);
   }
+}
+@media (max-width: 576px) {
+  .navigacijaZaglavlje {
+    display: none;
+  }
+}
+body {
+  position: relative;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+.onemoguciScroll {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.125rem;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,5 @@
 @use "./variables" as *;
 
-body {
-  position: relative;
-}
-
 #pregledPartija {
   background-color: $bojaPozadine;
   color: $bojaTekstaSvijetla;
@@ -11,8 +7,10 @@ body {
 }
 
 .uvodPregleda {
-  width: 50rem;
-  font-size: 18px;
+  width: 60rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  line-height: 1.5;
 }
 
 .pretinacTeksta {
@@ -53,13 +51,6 @@ body {
   background-color: $bojaPozadineUspjeh;
 }
 
-.lijevaStrana {
-  left: 0;
-}
-
-.desnaStrana {
-  right: 0;
-}
 #tablica {
   width: 65%;
   border-collapse: collapse;
@@ -78,6 +69,7 @@ body {
   td {
     padding: 5px;
     text-align: center;
+    font-size: 1.2rem;
   }
 }
 
