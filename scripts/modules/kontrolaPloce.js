@@ -174,7 +174,7 @@ function napuniTablicu(partije) {
   partije.forEach((partija) => {
     const dijeloviPartije = partija.split("]");
     const bijeli = dijeloviPartije[4].substring(
-      10,
+      11,
       dijeloviPartije[4].length - 1
     );
     const crni = dijeloviPartije[5].substring(
