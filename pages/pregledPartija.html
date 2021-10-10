@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/AbChess-0.3.0.css" />
+    <link rel="stylesheet" href="../styles/AbChess-0.3.0-min.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -53,6 +53,7 @@
     </header>
     <section id="pregledPartija">
       <h1 class="naslovPregleda">Pregledajte partije Alojzija Jankovića</h1>
+      <div class="crtaIspodNaslovaPregled"></div>
       <div class="pretinacTeksta">
         <p class="uvodPregleda">
           Na ovoj stranici je omogućen pregled izabranih 25 velemajstorskih
@@ -87,14 +88,23 @@
       </div>
       <div class="pretinacPloce">
         <h2 class="tekstIznadPloce">Ploča za pregled partije</h2>
-        <div id="ploca"></div>
-
-        <p class="trenutnaPartija"></p>
-        <div class="navigacijaKrozPartiju">
-          <button id="prviPotez">&lt;&lt;</button>
-          <button id="prethodniPotez">&lt;</button>
-          <button id="iduciPotez">&gt;</button>
-          <button id="posljednjiPotez">&gt;&gt;</button>
+        <div class="plocaIPotezi">
+          <div id="ploca"></div>
+          <div class="pretinacPodataka">
+            <div class="podaci">
+              <div class="bijeli"><p class="bijeliIgrac"></p></div>
+              <div class="pretinacPoteza">
+                <table class="potezi"></table>
+              </div>
+              <div class="crni"><p class="crniIgrac"></p></div>
+            </div>
+            <div class="navigacijaKrozPartiju">
+              <button id="prviPotez">&lt;&lt;</button>
+              <button id="prethodniPotez">&lt;</button>
+              <button id="iduciPotez">&gt;</button>
+              <button id="posljednjiPotez">&gt;&gt;</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

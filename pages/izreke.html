@@ -47,6 +47,7 @@
     <img class="ikonaNavigacije" src="../images/menu.svg" />
     <section id="generatorIzreka">
       <h1 class="naslov">Izreka Dana</h1>
+      <div class="crtaIspodPodnaslovaIzreke"></div>
       <p class="opisCitati">
         Pozdrav! Ja sam Anton, kreator ove stranice. Velemajstor Janković
         svakodnevno u svojim videozapisima izgovara različite izreke, krilatice
@@ -55,11 +56,19 @@
       </p>
 
       <div class="pretinacAvatar">
-        <div class="pretinacIzreke">
-          <p class="tekstAvatar"></p>
-          <p id="izreka"></p>
-        </div>
         <img src="../images/avatarSjetio.png" alt="avatar" class="avatar" />
+        <div class="pretinacIzreke">
+          <img
+            src="../images/mjehuricRazmisljanje.svg"
+            alt="Mjehuric Razmisljanje"
+            class="mjehuricRazmisljanje"
+            style="display: none"
+          />
+          <div class="tekstIzreke">
+            <span class="tekstAvatar"></span><br /><br />
+            <span id="izreka"></span>
+          </div>
+        </div>
       </div>
 
       <button id="generirajIzreku">Generiraj</button>

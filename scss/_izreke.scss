@@ -6,22 +6,31 @@
   height: 100%;
   h1 {
     font-size: 3.125rem;
-    margin-bottom: 1em;
+    margin-bottom: 0.2em;
   }
+}
+.crtaIspodPodnaslovaIzreke {
+  width: 17rem;
+  margin: auto;
+  height: 0.3em;
+  background-color: $bojaPozadineUspjeh;
+  border-radius: 5px;
+  margin-bottom: 3em;
 }
 
 .opisCitati {
   line-height: 1.5;
   letter-spacing: 0.4px;
   font-size: 1.3rem;
-  width: 50rem;
+  width: 65rem;
   margin: auto;
   text-align: justify;
   margin-bottom: 0.7em;
 }
 
 .avatar {
-  width: 450px;
+  width: 400px;
+  margin-top: 6em;
 }
 
 .tekstAvatar {
@@ -34,13 +43,47 @@
   text-align: center;
 }
 
+.tekstAvatar,
+#izreka {
+  z-index: 1;
+  color: black;
+  position: relative;
+  font-size: 1rem;
+}
+
 #izreka {
   line-height: 1.5;
   letter-spacing: 0.4px;
-  font-size: 1.3rem;
   width: 50rem;
   margin: auto;
   margin-bottom: 0.7em;
+  margin-top: 3em;
+}
+
+.mjehuricRazmisljanje {
+  position: absolute;
+  width: 250px;
+  left: -3em;
+  top: -2em;
+  z-index: 1;
+  transition: all 0s;
+}
+
+.pretinacIzreke {
+  position: absolute;
+  text-align: center;
+  display: inline;
+  width: 150px;
+  height: 100px;
+}
+
+.tekstIzreke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
 }
 
 @media (max-width: $maliUredaji) {
@@ -60,7 +103,6 @@
   .pretinacIzreke {
     text-align: center;
     display: flex;
-    flex-direction: column;
     width: 100%;
     margin-top: 3em;
     p {

@@ -1,6 +1,5 @@
 @use "./variables" as *;
 #naslovnica {
-  @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
   height: 100%;
   background-image: url(../images/background.jpg);
   background-size: cover;
@@ -41,6 +40,7 @@
 
 .podnaslov {
   font-size: 4rem;
+  text-align: center;
 }
 
 body {

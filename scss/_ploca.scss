@@ -4,6 +4,7 @@
   background-color: $bojaPozadine;
   color: $bojaTekstaSvijetla;
   position: relative;
+  min-height: 100%;
 }
 
 .uvodPregleda {
@@ -17,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .pretinacPloce {
@@ -26,7 +27,7 @@
   }
   margin-top: 3em;
   padding-bottom: 6em;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -34,7 +35,7 @@
 
 .naslovPregleda {
   font-size: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 0.2em;
 }
 
 .prostorZaTablicu {
@@ -54,6 +55,7 @@
     border-top: 2px solid $bojaTekstaTamna;
   }
   tr {
+    cursor: pointer;
     border-bottom: 2px solid $bojaTekstaTamna;
     border-right: 2px solid $bojaTekstaTamna;
     border-left: 2px solid $bojaTekstaTamna;
@@ -64,6 +66,73 @@
     text-align: center;
     font-size: 1.2rem;
   }
+}
+
+.podaci {
+  position: relative;
+  width: 25rem;
+  height: 15rem;
+  background-color: $bojaPrikaza;
+  border: 1px solid black;
+}
+
+.crni {
+  background-color: $bojaPrikaza;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 20%;
+  border-top: 1px solid whitesmoke;
+}
+.bijeli {
+  background-color: $bojaPrikaza;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 20%;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.crtaIspodNaslovaPregled {
+  width: 60%;
+  height: 0.3em;
+  background-color: $bojaPozadineUspjeh;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+.crni,
+.bijeli {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  font-size: 1.2rem;
+}
+
+.potezi {
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  tr {
+    border-bottom: 2px solid $bojaTekstaTamna;
+    border-right: 2px solid $bojaTekstaTamna;
+    border-left: 2px solid $bojaTekstaTamna;
+  }
+}
+
+.pretinacPoteza {
+  overflow-y: scroll;
+  max-height: 60%;
+  position: relative;
+  top: 20%;
+}
+
+.plocaIPotezi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
 }
 
 button {

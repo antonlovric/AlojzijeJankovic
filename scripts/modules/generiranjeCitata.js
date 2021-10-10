@@ -19,15 +19,21 @@ function prikazujTockice(tekstRazmisljanje, razmisljanje) {
   }, 200);
   setTimeout(() => {
     tekstRazmisljanje.innerText = "Evo ga!";
-    document.querySelector("#izreka").style.display = "block";
+    document.querySelector("#izreka").style.display = "inline";
     const avatar = document.querySelector(".avatar");
     avatar.src = "../images/avatarSjetio.png";
+    const mjehuric = document.querySelector(".mjehuricRazmisljanje");
+    mjehuric.src = "../images/mjehuricGovor.svg";
   }, 2400);
 }
 
 async function postaviTekstRazmisljanja() {
   const avatar = document.querySelector(".avatar");
   avatar.src = "../images/avatarRazmislja.png";
+  const mjehuric = document.querySelector(".mjehuricRazmisljanje");
+  mjehuric.style.display = "block";
+  mjehuric.src = "../images/mjehuricRazmisljanje.svg";
+
   const tekstRazmisljanje = document.querySelector(".tekstAvatar");
   let razmisljanja = [
     "Daj mi samo sekundu",

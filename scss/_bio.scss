@@ -13,19 +13,43 @@
   }
 }
 
+.crtaIspodNaslovaBio {
+  width: 7rem;
+  height: 0.3em;
+  background-color: $bojaPozadineUspjeh;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 6em;
+}
+
 .opis {
-  grid-area: opis;
+  h2 {
+    text-align: left;
+    font-size: 48px;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .crtaIspodPodnaslova {
+    width: 18rem;
+    min-height: 0.3em;
+    background-color: $bojaPozadineUspjeh;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+
+  font-size: 24px;
   padding: 40px;
-  width: 30rem;
+  width: 50rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   flex-direction: column;
   font-size: 1.2rem;
   line-height: 1.7;
-  color: $bojaTekstaTamna;
-
-  background: $bojaPozadineUspjeh;
+  color: $bojaTekstaSvijetla;
   border-radius: 10px;
 }
 
@@ -46,13 +70,8 @@
 }
 
 .pretinac {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "opis fotografije";
-  margin: auto;
-  width: 80%;
-  margin-top: 90px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .pozadinaBio {
@@ -74,7 +93,6 @@
 
 .uspjesi {
   color: $bojaTekstaTamna;
-
   width: 100%;
   padding: 0px 90px;
   background-color: $bojaPozadineUspjeh;
@@ -92,19 +110,13 @@
 }
 
 .pretinacUspjeha {
-  display: grid;
+  display: flex;
+  justify-content: space-around;
   padding: 50px;
-  gap: 90px;
-  grid-template-columns: 0.3fr 2fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "fotografija tekst";
-
   img {
-    grid-area: fotografija;
     object-fit: cover;
   }
   ul {
-    grid-area: tekst;
     width: 40rem;
     li {
       font-size: 1.5rem;
@@ -114,17 +126,15 @@
   }
 }
 .pretinacUspjehaInverz {
-  display: grid;
-  padding: 50px;
-  grid-template-columns: 1fr 0.3fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "tekst fotografija";
+  display: flex;
 
+  justify-content: space-around;
+  padding: 50px;
   img {
-    grid-area: fotografija;
+    object-fit: cover;
   }
   ul {
-    grid-area: tekst;
+    width: 40rem;
     li {
       font-size: 1.5rem;
       margin: 20px;
@@ -169,6 +179,22 @@
     width: 400px;
     height: 400px;
     font-size: 1rem;
+    margin-bottom: 8em;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .crtaIspodPodnaslova {
+    width: 1000rem;
+  }
+  .crtaIspodNaslovaBio {
+    width: 7rem;
+    height: 0.3em;
+    background-color: $bojaPozadineUspjeh;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 1em;
   }
   .pretinac {
     display: flex;
@@ -186,10 +212,13 @@
     flex-direction: column;
     justify-content: center;
     img {
+      margin: auto;
       width: 350px;
       height: auto;
     }
     ul {
+      margin: auto;
+      width: 20rem;
       li {
         font-size: 1.1rem;
         width: 22rem;
@@ -204,11 +233,55 @@
     img {
       width: 350px;
       height: auto;
+      margin: auto;
     }
     ul {
+      margin: auto;
+      width: 20rem;
       li {
         font-size: 1.1rem;
       }
+    }
+  }
+}
+
+@media (max-width: $srednjiUredaji) {
+  .okvirZaSlike {
+    height: 350px;
+    width: 400px;
+  }
+
+  .opis {
+    padding: 50px;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.7;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .uspjesi {
+    padding: 20px;
+
+    ul {
+      li {
+        font-size: 1.2rem;
+        width: 70vw;
+      }
+    }
+    img {
+      margin: auto;
+      #prvaFotografijaUspjeha {
+        width: 300px;
+      }
+    }
+    #trecaFotografijaUspjeha {
+      width: 300px;
     }
   }
 }
@@ -227,62 +300,29 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.7;
+    margin-bottom: 8em;
+    h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 2em;
+    }
   }
 
   .uspjesi {
     padding: 20px;
     margin: auto;
     ul {
+      width: 50%;
       li {
-        font-size: 0.8rem;
+        font-size: 1rem;
         width: 70vw;
       }
     }
     img {
-      width: 250px;
+      width: 300px;
       margin: auto;
-    }
-  }
-}
-
-@media (max-width: $srednjiUredaji) {
-  .okvirZaSlike {
-    height: 350px;
-    width: 400px;
-  }
-
-  .opis {
-    grid-area: opis;
-    padding: 50px;
-    width: 30rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .uspjesi {
-    padding: 20px;
-
-    ul {
-      li {
-        font-size: 1.2rem;
-        width: 70vw;
-      }
-    }
-    img {
-      width: 450px;
-      margin: auto;
-      &:first-child {
-        width: 300px;
-      }
-    }
-    #trecaFotografijaUspjeha {
-      width: 450px;
     }
   }
 }

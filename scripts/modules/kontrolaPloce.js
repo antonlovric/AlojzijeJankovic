@@ -142,22 +142,30 @@ function odaberiPartiju(object) {
   const paragraf = document.querySelector(".trenutnaPartija");
   let index = object.children[0].innerHTML - 1;
   let partija = informacijeOPartijama[index];
-  let tekst =
-    "Trenutna partija: " +
-    partija.bijeli +
-    " - " +
-    partija.crni +
-    " (" +
-    partija.rezultat +
-    ")";
-  paragraf.innerHTML = tekst;
+  let crni = document.querySelector(".crni");
+  let bijeli = document.querySelector(".bijeli");
+  crni.innerHTML = partija.crni;
+  bijeli.innerHTML = partija.bijeli;
   potez = 0;
 
   abChess.setPGN(partija.pgn);
+  let poteziPartije = abChess.getMovesPGN();
+  const tablicaPoteza = document.querySelector(".potezi");
+  tablicaPoteza.innerHTML = "";
+  let brojacPoteza = 1;
+  for (let i = 0; i < poteziPartije.length; i += 2) {
+    const sablona = `<tr class = "potezPartije">
+    <td>${brojacPoteza++}</td>
+    <td>${poteziPartije[i]}</td>
+    <td>${poteziPartije[i + 1]}</td>
+    </tr>`;
+    tablicaPoteza.innerHTML += sablona;
+  }
   osvjeziGumbe();
   osvjeziPlocu();
   brojPoteza = abChess.getMovesPGN().length;
   document.querySelector(".tekstIznadPloce").scrollIntoView();
+  document.querySelector(".pretinacPloce").style.display = "flex";
 }
 
 function napuniTablicu(partije) {
@@ -226,6 +234,7 @@ function inicijalizirajTablicu() {
           partija.classList.remove("odabranaPartija");
         }
       });
+
       this.classList.add("odabranaPartija");
       odaberiPartiju(this);
     });
