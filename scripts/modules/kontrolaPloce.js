@@ -178,19 +178,19 @@ function napuniTablicu(partije) {
       dijeloviPartije[4].length - 1
     );
     const crni = dijeloviPartije[5].substring(
-      10,
+      11,
       dijeloviPartije[5].length - 1
     );
     const nazivTurnira = dijeloviPartije[0].substring(
-      10,
+      11,
       dijeloviPartije[0].length - 1
     );
     const datum = dijeloviPartije[2].substring(
-      9,
+      10,
       dijeloviPartije[2].length - 1
     );
     const rezultat = dijeloviPartije[6].substring(
-      11,
+      12,
       dijeloviPartije[6].length - 1
     );
 
