@@ -174,23 +174,20 @@ function napuniTablicu(partije) {
   partije.forEach((partija) => {
     const dijeloviPartije = partija.split("]");
     const bijeli = dijeloviPartije[4].substring(
-      10,
+      9,
       dijeloviPartije[4].length - 1
     );
-    const crni = dijeloviPartije[5].substring(
-      10,
-      dijeloviPartije[5].length - 1
-    );
+    const crni = dijeloviPartije[5].substring(9, dijeloviPartije[5].length - 1);
     const nazivTurnira = dijeloviPartije[0].substring(
-      10,
+      9,
       dijeloviPartije[0].length - 1
     );
     const datum = dijeloviPartije[2].substring(
-      9,
+      8,
       dijeloviPartije[2].length - 1
     );
     const rezultat = dijeloviPartije[6].substring(
-      11,
+      10,
       dijeloviPartije[6].length - 1
     );
 
