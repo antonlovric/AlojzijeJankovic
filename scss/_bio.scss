@@ -118,6 +118,7 @@
   }
   ul {
     width: 40rem;
+    margin: auto;
     li {
       font-size: 1.5rem;
       margin: 20px;
@@ -183,18 +184,18 @@
     h2 {
       font-size: 2rem;
     }
+    .crtaIspodPodnaslova {
+      width: 10rem;
+    }
   }
 
-  .crtaIspodPodnaslova {
-    width: 1000rem;
-  }
   .crtaIspodNaslovaBio {
     width: 7rem;
     height: 0.3em;
     background-color: $bojaPozadineUspjeh;
     border-radius: 5px;
     margin: auto;
-    margin-bottom: 1em;
+    margin-bottom: 5em;
   }
   .pretinac {
     display: flex;
@@ -314,7 +315,6 @@
     padding: 20px;
     margin: auto;
     ul {
-      width: 50%;
       li {
         font-size: 1rem;
         width: 70vw;

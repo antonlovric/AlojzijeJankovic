@@ -229,6 +229,7 @@ body {
 }
 .pretinacUspjeha ul {
   width: 40rem;
+  margin: auto;
 }
 .pretinacUspjeha ul li {
   font-size: 1.5rem;
@@ -292,9 +293,8 @@ body {
   .opis h2 {
     font-size: 2rem;
   }
-
-  .crtaIspodPodnaslova {
-    width: 1000rem;
+  .opis .crtaIspodPodnaslova {
+    width: 10rem;
   }
 
   .crtaIspodNaslovaBio {
@@ -303,7 +303,7 @@ body {
     background-color: #c8a69d;
     border-radius: 5px;
     margin: auto;
-    margin-bottom: 1em;
+    margin-bottom: 5em;
   }
 
   .pretinac {
@@ -420,9 +420,6 @@ body {
   .uspjesi {
     padding: 20px;
     margin: auto;
-  }
-  .uspjesi ul {
-    width: 50%;
   }
   .uspjesi ul li {
     font-size: 1rem;
@@ -624,6 +621,10 @@ footer {
   .pretinacPloce h2 {
     margin-bottom: 1em;
   }
+
+  .plocaIPotezi {
+    flex-direction: column;
+  }
 }
 #generatorIzreka {
   color: #eaeaea;
@@ -741,6 +742,24 @@ footer {
   .pretinacIzreke #izreka {
     width: 100%;
     font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pretinacAvatar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+  }
+
+  .avatar {
+    margin: 0;
+  }
+
+  .mjehuricRazmisljanje {
+    margin: auto;
   }
 }
 .navigacijaZaglavlje {

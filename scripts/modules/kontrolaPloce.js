@@ -8,7 +8,7 @@ let opcije = {
   width: 480,
 };
 
-if (screen.width <= 768) {
+if (screen.width <= 1000) {
   opcije.width = 320;
 }
 let potez = 0;
