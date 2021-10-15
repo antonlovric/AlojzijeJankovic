@@ -7,7 +7,7 @@
 }
 
 #naslovnica {
-  height: 100%;
+  height: min-content;
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -629,7 +629,7 @@ footer {
   color: #eaeaea;
   text-align: center;
   background-color: #4d251f;
-  height: 100%;
+  height: min-content;
 }
 #generatorIzreka h1 {
   font-size: 3.125rem;
