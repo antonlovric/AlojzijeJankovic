@@ -12,6 +12,7 @@
   font-size: 1.2rem;
   letter-spacing: 0.4px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .pretinacTeksta {
@@ -114,11 +115,12 @@
   width: 100%;
   text-align: center;
   color: whitesmoke;
-  tr {
-    border-bottom: 2px solid $bojaTekstaTamna;
-    border-right: 2px solid $bojaTekstaTamna;
-    border-left: 2px solid $bojaTekstaTamna;
-  }
+  border-collapse: collapse;
+}
+
+.trenutniRed {
+  background-color: #e0e0e0;
+  color: $bojaTekstaTamna;
 }
 
 .pretinacPoteza {
@@ -172,7 +174,7 @@ footer {
 
 @media (max-width: $maliUredaji) {
   .uvodPregleda {
-    width: 60%;
+    width: 70%;
   }
   #tablica {
     td {
@@ -186,10 +188,6 @@ footer {
     }
     margin-top: 1em;
     padding-bottom: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 
   .plocaIPotezi {

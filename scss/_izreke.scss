@@ -86,36 +86,6 @@
   width: 100%;
 }
 
-@media (max-width: $maliUredaji) {
-  .opisCitati {
-    line-height: 1.5;
-    letter-spacing: 0.4px;
-    font-size: 1.2rem;
-    width: 80vw;
-    margin: auto;
-    text-align: justify;
-    margin-bottom: 0.7em;
-  }
-  .avatar {
-    width: 350px;
-  }
-
-  .pretinacIzreke {
-    text-align: center;
-    display: flex;
-    width: 100%;
-    margin-top: 3em;
-    p {
-      width: 100%;
-      font-size: 1.1rem;
-    }
-    #izreka {
-      width: 100%;
-      font-size: 1.1rem;
-    }
-  }
-}
-
 @media screen and (max-width: 900px) {
   .pretinacAvatar {
     display: flex;
@@ -130,5 +100,48 @@
   }
   .mjehuricRazmisljanje {
     margin: auto;
+  }
+}
+
+@media (max-width: $maliUredaji) {
+  .opisCitati {
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    font-size: 1.2rem;
+    width: 80vw;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 0.7em;
+  }
+  .avatar {
+    width: 300px;
+  }
+
+  .mjehuricRazmisljanje {
+    width: 220px;
+    left: auto;
+    position: relative;
+  }
+
+  .tekstIzreke {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .pretinacIzreke {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    position: relative;
+    p {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    #izreka {
+      width: 100%;
+      font-size: 0.9rem;
+    }
   }
 }

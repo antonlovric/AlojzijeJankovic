@@ -48,7 +48,7 @@ function osvjeziGumbeTablice() {
   }
 }
 
-function prikazStraniceTablice(broj) {
+function prikazStraniceTablice() {
   const ukupniBrojStranica = svePartije.length;
   const prikazBrojaStranice = document.querySelector(".brojStranice");
   prikazBrojaStranice.innerHTML =
@@ -76,6 +76,27 @@ document.querySelector(".iducaStranica").addEventListener("click", function () {
   prikazStraniceTablice(++brojStranice);
 });
 
+function obojiRedakPoteza(trenutniPotez, sviPotezi) {
+  sviPotezi.forEach((potez) => {
+    console.log(potez);
+    if (potez === trenutniPotez) {
+      potez.classList.add("trenutniRed");
+
+      potez.scrollIntoView();
+    } else {
+      potez.classList.remove("trenutniRed");
+    }
+  });
+}
+
+function oznaciPotez() {
+  let trenutniRed = Math.round(potez / 2) - 1;
+  const sviPotezi = document.querySelectorAll(".potezPartije");
+  if (sviPotezi[trenutniRed] != undefined) {
+    obojiRedakPoteza(sviPotezi[trenutniRed], sviPotezi);
+  }
+}
+
 function osvjeziGumbe() {
   if (potez < brojPoteza) {
     iduciPotez.disabled = false;
@@ -91,6 +112,7 @@ function osvjeziGumbe() {
     prviPotez.disabled = false;
     prethodniPotez.disabled = false;
   }
+  oznaciPotez();
 }
 
 function igrajPrviPotez() {
@@ -154,10 +176,10 @@ function odaberiPartiju(object) {
   tablicaPoteza.innerHTML = "";
   let brojacPoteza = 1;
   for (let i = 0; i < poteziPartije.length; i += 2) {
-    const sablona = `<tr class = "potezPartije">
+    const sablona = `<tr class = "potezPartije" colspan = "3">
     <td>${brojacPoteza++}</td>
-    <td>${poteziPartije[i]}</td>
-    <td>${poteziPartije[i + 1]}</td>
+    <td>${poteziPartije[i] == undefined ? "" : poteziPartije[i]}</td>
+    <td>${poteziPartije[i + 1] == undefined ? "" : poteziPartije[i + 1]}</td>
     </tr>`;
     tablicaPoteza.innerHTML += sablona;
   }

@@ -155,11 +155,10 @@ body {
   text-align: justify;
 }
 .opis .crtaIspodPodnaslova {
-  width: 18rem;
+  width: 28rem;
   min-height: 0.3em;
   background-color: #c8a69d;
   border-radius: 5px;
-  margin: auto;
   margin-bottom: 2em;
 }
 
@@ -222,6 +221,7 @@ body {
 .pretinacUspjeha {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 50px;
 }
 .pretinacUspjeha img {
@@ -239,6 +239,7 @@ body {
 
 .pretinacUspjehaInverz {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   padding: 50px;
 }
@@ -442,6 +443,7 @@ body {
   font-size: 1.2rem;
   letter-spacing: 0.4px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .pretinacTeksta {
@@ -545,11 +547,12 @@ body {
   width: 100%;
   text-align: center;
   color: whitesmoke;
+  border-collapse: collapse;
 }
-.potezi tr {
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
+
+.trenutniRed {
+  background-color: #e0e0e0;
+  color: black;
 }
 
 .pretinacPoteza {
@@ -603,7 +606,7 @@ footer {
 
 @media (max-width: 576px) {
   .uvodPregleda {
-    width: 60%;
+    width: 70%;
   }
 
   #tablica td {
@@ -613,10 +616,6 @@ footer {
   .pretinacPloce {
     margin-top: 1em;
     padding-bottom: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
   .pretinacPloce h2 {
     margin-bottom: 1em;
@@ -714,36 +713,6 @@ footer {
   width: 100%;
 }
 
-@media (max-width: 576px) {
-  .opisCitati {
-    line-height: 1.5;
-    letter-spacing: 0.4px;
-    font-size: 1.2rem;
-    width: 80vw;
-    margin: auto;
-    text-align: justify;
-    margin-bottom: 0.7em;
-  }
-
-  .avatar {
-    width: 350px;
-  }
-
-  .pretinacIzreke {
-    text-align: center;
-    display: flex;
-    width: 100%;
-    margin-top: 3em;
-  }
-  .pretinacIzreke p {
-    width: 100%;
-    font-size: 1.1rem;
-  }
-  .pretinacIzreke #izreka {
-    width: 100%;
-    font-size: 1.1rem;
-  }
-}
 @media screen and (max-width: 900px) {
   .pretinacAvatar {
     display: flex;
@@ -760,6 +729,49 @@ footer {
 
   .mjehuricRazmisljanje {
     margin: auto;
+  }
+}
+@media (max-width: 576px) {
+  .opisCitati {
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    font-size: 1.2rem;
+    width: 80vw;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 0.7em;
+  }
+
+  .avatar {
+    width: 300px;
+  }
+
+  .mjehuricRazmisljanje {
+    width: 220px;
+    left: auto;
+    position: relative;
+  }
+
+  .tekstIzreke {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .pretinacIzreke {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    position: relative;
+  }
+  .pretinacIzreke p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .pretinacIzreke #izreka {
+    width: 100%;
+    font-size: 0.9rem;
   }
 }
 .navigacijaZaglavlje {
@@ -880,11 +892,6 @@ footer {
     transform: rotate(180deg);
   }
 }
-@media (max-width: 576px) {
-  .navigacijaZaglavlje {
-    display: none;
-  }
-}
 @media (max-width: 768px) {
   .navigacijaZaglavlje {
     display: none;
@@ -893,6 +900,11 @@ footer {
 @media (max-width: 992px) {
   .navigacijaZaglavlje .linkNavigacije {
     font-size: 0.7rem;
+  }
+}
+@media (max-width: 576px) {
+  .navigacijaZaglavlje {
+    display: none;
   }
 }
 body {

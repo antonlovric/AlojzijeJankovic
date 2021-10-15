@@ -33,11 +33,10 @@
   }
 
   .crtaIspodPodnaslova {
-    width: 18rem;
+    width: 28rem;
     min-height: 0.3em;
     background-color: $bojaPozadineUspjeh;
     border-radius: 5px;
-    margin: auto;
     margin-bottom: 2em;
   }
 
@@ -112,6 +111,7 @@
 .pretinacUspjeha {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 50px;
   img {
     object-fit: cover;
@@ -128,7 +128,7 @@
 }
 .pretinacUspjehaInverz {
   display: flex;
-
+  align-items: center;
   justify-content: space-around;
   padding: 50px;
   img {

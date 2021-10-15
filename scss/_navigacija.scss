@@ -123,12 +123,6 @@
   }
 }
 
-@media (max-width: $maliUredaji) {
-  .navigacijaZaglavlje {
-    display: none;
-  }
-}
-
 @media (max-width: $srednjiUredaji) {
   .navigacijaZaglavlje {
     display: none;
@@ -140,5 +134,11 @@
     .linkNavigacije {
       font-size: 0.7rem;
     }
+  }
+}
+
+@media (max-width: $maliUredaji) {
+  .navigacijaZaglavlje {
+    display: none;
   }
 }
