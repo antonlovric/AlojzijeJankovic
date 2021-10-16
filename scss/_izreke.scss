@@ -3,7 +3,7 @@
   color: $bojaTekstaSvijetla;
   text-align: center;
   background-color: $bojaPozadine;
-  height: min-content;
+  height: 100%;
 
   h1 {
     font-size: 3.125rem;
@@ -105,6 +105,9 @@
 }
 
 @media (max-width: $maliUredaji) {
+  #generatorIzreka {
+    height: min-content;
+  }
   .opisCitati {
     line-height: 1.5;
     letter-spacing: 0.4px;
@@ -131,7 +134,7 @@
 
   .pretinacIzreke {
     text-align: center;
-    display: flex;
+    display: none;
     width: 100%;
     margin-top: 1em;
     margin-bottom: 2em;

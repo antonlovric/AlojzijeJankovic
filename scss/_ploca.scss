@@ -174,23 +174,34 @@ footer {
 
 @media (max-width: $maliUredaji) {
   .uvodPregleda {
-    width: 70%;
+    width: 80%;
   }
   #tablica {
+    th {
+      font-size: 0.7rem;
+    }
     td {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
 
-  .pretinacPloce {
-    h2 {
-      margin-bottom: 1em;
-    }
-    margin-top: 1em;
-    padding-bottom: 1em;
+  .podaci {
+    width: 20rem;
   }
 
-  .plocaIPotezi {
-    flex-direction: column;
+  .pretinacPodataka {
+    margin: auto;
+
+    .pretinacPloce {
+      h2 {
+        margin-bottom: 1em;
+      }
+      margin-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    .plocaIPotezi {
+      flex-direction: column;
+    }
   }
 }

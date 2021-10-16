@@ -53,24 +53,30 @@ async function postaviTekstRazmisljanja() {
 }
 
 function dohvatiIzreke() {
-  return new Promise((resolve) => {
-    $.get("../misc/poruke.txt", function (data) {
-      let izreke = data.split(/[\r\n]+/);
-      resolve(izreke);
+  return fetch("../misc/poruke.txt")
+    .then((odgovor) => odgovor.text())
+    .then((izreke) => {
+      return izreke.split(/[\r\n]+/);
     });
-  });
+}
+
+function prikaziMjehuric() {
+  const pretinacIzreke = document.querySelector(".pretinacIzreke");
+  if (pretinacIzreke.style.display == "" && screen.width < 1000) {
+    pretinacIzreke.style.display = "flex";
+  }
 }
 
 async function generirajIzreku() {
+  prikaziMjehuric();
   const poruke = await dohvatiIzreke();
-  console.log(poruke);
 
   const paragraf = document.querySelector("#izreka");
   paragraf.style.display = "none";
   let trenutnaPoruka = paragraf.innerText;
 
   let index = Math.round(Math.random() * (poruke.length - 1));
-  console.log(index);
+
   let novaPoruka = poruke[index];
 
   while (trenutnaPoruka && novaPoruka.localeCompare(trenutnaPoruka) == 0) {

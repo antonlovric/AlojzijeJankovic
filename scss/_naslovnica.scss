@@ -1,6 +1,6 @@
 @use "./variables" as *;
 #naslovnica {
-  height: min-content;
+  height: 100vh;
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;

@@ -149,6 +149,10 @@
   height: 400px;
 }
 
+footer {
+  color: $bojaTekstaTamna;
+}
+
 .promjenaPrethodna {
   animation: promjenaPrethodneFotografije 2s ease-in-out normal forwards;
 }
@@ -312,17 +316,31 @@
   }
 
   .uspjesi {
-    padding: 20px;
     margin: auto;
     ul {
+      width: 20rem;
       li {
         font-size: 1rem;
-        width: 70vw;
+        width: 100%;
       }
     }
     img {
-      width: 300px;
+      width: 250px;
       margin: auto;
+    }
+  }
+  #trecaFotografijaUspjeha {
+    width: 250px;
+  }
+
+  .pretinacUspjeha {
+    padding: 0;
+  }
+
+  .pretinacUspjehaInverz {
+    padding: 0;
+    ul {
+      width: 20rem;
     }
   }
 }
