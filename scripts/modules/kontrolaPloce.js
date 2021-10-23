@@ -146,10 +146,8 @@ function odaberiPartiju(object) {
   console.log(brojPoteza);
   osvjeziGumbe();
   osvjeziPlocu();
-  console.log(document.querySelector(".tekstIznadPloce"));
-  document.querySelector(".tekstIznadPloce").scrollIntoView();
-  console.log("prosao scroll");
   document.querySelector(".pretinacPloce").style.display = "flex";
+  document.querySelector(".tekstIznadPloce").scrollIntoView();
 }
 
 function prikazStraniceTablice(brojStranice) {

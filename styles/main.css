@@ -498,6 +498,10 @@ footer {
   flex-direction: column;
 }
 
+.tekstIznadPloce {
+  scroll-margin-top: 2em;
+}
+
 #tablica {
   width: 65%;
   border-collapse: collapse;
@@ -639,6 +643,8 @@ footer {
 
   .podaci {
     width: 20rem;
+    font-size: 1rem;
+    height: 10rem;
   }
 
   .pretinacPodataka {
@@ -651,7 +657,8 @@ footer {
   .pretinacPodataka .pretinacPloce h2 {
     margin-bottom: 1em;
   }
-  .pretinacPodataka .plocaIPotezi {
+
+  .plocaIPotezi {
     flex-direction: column;
   }
 }
