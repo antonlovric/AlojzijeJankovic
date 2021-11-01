@@ -52,12 +52,15 @@ async function postaviTekstRazmisljanja() {
   prikazujTockice(tekstRazmisljanje, razmisljanje);
 }
 
-function dohvatiIzreke() {
-  return fetch("../misc/poruke.txt")
-    .then((odgovor) => odgovor.text())
-    .then((izreke) => {
-      return izreke.split(/[\r\n]+/);
-    });
+async function dohvatiIzreke() {
+  const odgovor = await fetch("../misc/poruke.txt");
+  const izreke = await odgovor.text();
+  return izreke.split(/[\r\n]+/);
+  // return
+  //   .then((odgovor) => odgovor.text())
+  //   .then((izreke) => {
+  //     return izreke.split(/[\r\n]+/);
+  //   });
 }
 
 function prikaziMjehuric() {
@@ -69,6 +72,7 @@ function prikaziMjehuric() {
 
 async function generirajIzreku() {
   prikaziMjehuric();
+  prilagodiEkran();
   const poruke = await dohvatiIzreke();
 
   const paragraf = document.querySelector("#izreka");
@@ -86,6 +90,13 @@ async function generirajIzreku() {
   postaviTekstRazmisljanja();
 
   paragraf.innerText = novaPoruka;
+}
+
+function prilagodiEkran() {
+  if (screen.width <= 1000) {
+    const odjeljakIzreka = document.querySelector("#generatorIzreka");
+    odjeljakIzreka.style.height = "max-content";
+  }
 }
 
 export { inicijalizirajDogadaje };
