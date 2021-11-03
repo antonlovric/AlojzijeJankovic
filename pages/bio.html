@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       type="module"
       src="../scripts/modules/funkcionalnostIzbornika.js"
@@ -46,9 +47,13 @@
     <section id="bio">
       <div class="pretinac">
         <div class="opis">
-          <h2>O Alojziju Jankoviću</h2>
-          <div class="crtaIspodPodnaslova"></div>
-          <p class="text">
+          <h2 data-aos-delay="100" data-aos="fade-in">O Alojziju Jankoviću</h2>
+          <div
+            data-aos-delay="100"
+            data-aos="fade-in"
+            class="crtaIspodPodnaslova"
+          ></div>
+          <p data-aos-delay="200" data-aos="fade-in" class="text">
             Alojzije Janković, rođen 2. travnja 1983. godine u Zagrebu, je
             hrvatski šahist koji je došao do titule Velemajstora. Nalazi se u
             društvu 25 ostalih hrvatskih šahista koji su postali velemajstori u
@@ -61,7 +66,7 @@
             ponekad i pratitelji kanala.
           </p>
         </div>
-        <div class="okvirZaSlike">
+        <div data-aos-delay="300" data-aos="fade-in" class="okvirZaSlike">
           <img
             src="../images/alojzije.jpeg"
             alt="Fotografija Alojzija Jankovića"
@@ -76,8 +81,10 @@
       </div>
       <div class="podrucjeUspjeha">
         <div class="uspjesi">
-          <h2 class="naslovUspjeha">Šahovski uspjesi u Hrvatskoj</h2>
-          <div class="pretinacUspjeha">
+          <h2 data-aos-delay="100" data-aos="fade-in" class="naslovUspjeha">
+            Šahovski uspjesi u Hrvatskoj
+          </h2>
+          <div data-aos-delay="200" data-aos="fade-in" class="pretinacUspjeha">
             <img
               src="../images/krupniKadar.jpg"
               alt="Alojzije Janković kao predstavnik Hrvatske reprezentacije"
@@ -100,8 +107,14 @@
           </div>
         </div>
         <div class="uspjesi uspjehInverz">
-          <h2 class="naslovUspjeha">Međunarodni šahovski uspjesi</h2>
-          <div class="pretinacUspjehaInverz">
+          <h2 data-aos-delay="100" data-aos="fade-in" class="naslovUspjeha">
+            Međunarodni šahovski uspjesi
+          </h2>
+          <div
+            data-aos-delay="200"
+            data-aos="fade-in"
+            class="pretinacUspjehaInverz"
+          >
             <ul class="listaUspjeha">
               <li class="uspjeh">Pobjeda u Sarajevu 2006.</li>
               <li class="uspjeh">1. mjesto na Sabadell Openu 2008.</li>
@@ -126,8 +139,10 @@
           </div>
         </div>
         <div class="uspjesi">
-          <h2 class="naslovUspjeha">Uspjesi izvan šaha</h2>
-          <div class="pretinacUspjeha">
+          <h2 data-aos-delay="100" data-aos="fade-in" class="naslovUspjeha">
+            Uspjesi izvan šaha
+          </h2>
+          <div data-aos-delay="200" data-aos="fade-in" class="pretinacUspjeha">
             <img
               src="../images/izvanSaha.jpg"
               alt="Alojzije Janković u društvu gradonačelnika Zagreba, Milana Bandića"
@@ -153,5 +168,10 @@
       </div>
     </section>
     <footer>Copyright Alojzije Janković, 2021. &copy;</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700 });
+    </script>
   </body>
 </html>

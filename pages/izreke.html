@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <script
       type="module"
@@ -41,16 +42,22 @@
     </nav>
     <img class="ikonaNavigacije" src="../images/menu.svg" alt="navigacija" />
     <section id="generatorIzreka">
-      <h1 class="naslov">Izreka Dana</h1>
-      <div class="crtaIspodPodnaslovaIzreke"></div>
-      <p class="opisCitati">
+      <h1 data-aos-delay="100" data-aos="fade-in" class="naslov">
+        Izreka Dana
+      </h1>
+      <div
+        data-aos-delay="100"
+        data-aos="fade-in"
+        class="crtaIspodPodnaslovaIzreke"
+      ></div>
+      <p data-aos-delay="200" data-aos="fade-in" class="opisCitati">
         Pozdrav! Ja sam Anton, kreator ove stranice. Velemajstor Janković
         svakodnevno u svojim videozapisima izgovara različite izreke, krilatice
         i poštapalice pomoću koji uvijek nasmije svoju publiku. Klikni na gumb
         ispod pa ću se pokušati sjetiti jedne od njih!
       </p>
 
-      <div class="pretinacAvatar">
+      <div data-aos-delay="300" data-aos="fade-in" class="pretinacAvatar">
         <img src="../images/avatarSjetio.png" alt="avatar" class="avatar" />
         <div class="pretinacIzreke">
           <img
@@ -69,5 +76,10 @@
       <button id="generirajIzreku">Generiraj</button>
     </section>
     <footer>Copyright Alojzije Janković, 2021. &copy;</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700 });
+    </script>
   </body>
 </html>

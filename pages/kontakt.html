@@ -9,6 +9,8 @@
       content="Web stranica koja pruža izvore pomoću kojih je moguće kontaktirati Alojzija Jankovića"
     />
     <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script
       type="module"
       src="../scripts/modules/funkcionalnostIzbornika.js"
@@ -44,11 +46,15 @@
       <img class="ikonaNavigacije" src="../images/menu.svg" alt="navigacija" />
       <h1 class="naslovKontakt">Kontakt</h1>
       <div class="crtaIspodNaslovaKontakt"></div>
-      <p class="uvodKontakt">
+      <p class="uvodKontakt" data-aos-delay="100" data-aos="fade-in">
         Alojzija Jankovića možete kontaktirati na iduće načine:
       </p>
       <div class="pretinacKartica">
-        <div class="kartica kontaktSavez">
+        <div
+          class="kartica kontaktSavez"
+          data-aos-delay="200"
+          data-aos="fade-in"
+        >
           <a
             href="https://hrvatski-sahovski-savez.hr/organi-saveza/"
             class="linkSavez"
@@ -59,7 +65,11 @@
           /></a>
           <p class="tekstKartice">Stranica Hrvatskog šahovskog saveza</p>
         </div>
-        <div class="kartica kontaktLinkedIn">
+        <div
+          class="kartica kontaktLinkedIn"
+          data-aos-delay="300"
+          data-aos="fade-in"
+        >
           <a
             href="https://www.linkedin.com/in/alojzije-jankovic-ba803a96/?originalSubdomain=hr"
             class="linkLinkedIn"
@@ -70,7 +80,11 @@
           /></a>
           <p class="tekstKartice">LinkedIn profil</p>
         </div>
-        <div class="kartica kontaktYoutube">
+        <div
+          class="kartica kontaktYoutube"
+          data-aos-delay="400"
+          data-aos="fade-in"
+        >
           <a
             href="https://www.youtube.com/channel/UCYvq-ghyAhdu9sj0gGkETXA"
             class="linkYoutube"
@@ -85,5 +99,10 @@
     </main>
 
     <footer>Copyright Alojzije Janković, 2021. &copy;</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700 });
+    </script>
   </body>
 </html>

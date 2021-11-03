@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <title>Alojzije Janković</title>
     <link
@@ -31,15 +32,24 @@
   </head>
   <body>
     <section id="naslovnica">
-      <h1 class="naslov">Alojzije Janković</h1>
-      <h2 class="podnaslov">Hrvatski šahovski velemajstor</h2>
+      <h1 class="naslov" data-aos-delay="100" data-aos="fade-in">
+        Alojzije Janković
+      </h1>
+      <h2 class="podnaslov" data-aos-delay="200" data-aos="fade-in">
+        Hrvatski šahovski velemajstor
+      </h2>
 
-      <nav class="navigacija">
+      <nav class="navigacija" data-aos-delay="300" data-aos="fade-in">
         <a href="bio.html" class="linkNavigacije">O Alojziju Jankoviću</a>
         <a href="pregledPartija.html" class="linkNavigacije">Pregled Partija</a>
         <a href="izreke.html" class="linkNavigacije">Izreke</a>
         <a href="kontakt.html" class="linkNavigacije">Kontakt</a>
       </nav>
     </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700 });
+    </script>
   </body>
 </html>

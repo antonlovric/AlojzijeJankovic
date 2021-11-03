@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/AbChess-0.3.0-min.css" />
     <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script
       type="module"
@@ -47,10 +48,16 @@
       </span>
     </header>
     <section id="pregledPartija">
-      <h1 class="naslovPregleda">Pregledajte partije Alojzija Jankovića</h1>
-      <div class="crtaIspodNaslovaPregled"></div>
+      <h1 data-aos-delay="100" data-aos="fade-in" class="naslovPregleda">
+        Pregledajte partije Alojzija Jankovića
+      </h1>
+      <div
+        data-aos-delay="100"
+        data-aos="fade-in"
+        class="crtaIspodNaslovaPregled"
+      ></div>
       <div class="pretinacTeksta">
-        <p class="uvodPregleda">
+        <p data-aos-delay="200" data-aos="fade-in" class="uvodPregleda">
           Na ovoj stranici je omogućen pregled izabranih 25 velemajstorskih
           partija Alojzija Jankovića. Prikupljene su partije iz brojnih turnira
           u kojima je igrao velemajstor Janković i možete ih odabrati u tablici
@@ -59,7 +66,7 @@
         </p>
       </div>
 
-      <div class="prostorZaTablicu">
+      <div data-aos-delay="300" data-aos="fade-in" class="prostorZaTablicu">
         <h2>Kolekcija Partija</h2>
         <table id="tablica">
           <thead>
@@ -104,5 +111,10 @@
       </div>
     </section>
     <footer>Copyright Alojzije Janković, 2021. &copy;</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700 });
+    </script>
   </body>
 </html>
