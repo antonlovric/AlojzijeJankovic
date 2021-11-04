@@ -11,7 +11,24 @@
     <link rel="stylesheet" href="../styles/AbChess-0.3.0-min.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
     <script
       type="module"
       src="../scripts/modules/funkcionalnostIzbornika.js"
@@ -20,8 +37,13 @@
     <script src="../scripts/AbChess-0.3.0-min.js" defer></script>
     <script type="module" src="../scripts/modules/kontrolaPloce.js"></script>
     <script type="module" src="../scripts/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1b42504273.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
-    <title>Alojzije Janković</title>
+    <title>Alojzije Janković | Pregled Partija</title>
   </head>
   <body>
     <nav class="izbornik">
@@ -82,9 +104,10 @@
           <tbody id="sadrzajTablice"></tbody>
         </table>
         <div class="navigacijaPoTablici">
-          <button class="prethodnaStranica">&lt;&lt;</button>
+          <button class="prethodnaStranica navigacijaTablice">&lt;&lt;</button>
           <span class="brojStranice"></span>
-          <button class="iducaStranica">&gt;&gt;</button>
+
+          <button class="iducaStranica navigacijaTablice">&gt;&gt;</button>
           <p class="brojStranice"></p>
         </div>
       </div>
@@ -101,10 +124,15 @@
               <div class="crni"><p class="crniIgrac"></p></div>
             </div>
             <div class="navigacijaKrozPartiju">
-              <button id="prviPotez">&lt;&lt;</button>
+              <i class="fas fa-fast-backward fa-2x" id="prviPotez"></i>
+              <i class="fas fa-step-backward fa-2x" id="prethodniPotez"></i>
+              <i class="fas fa-step-forward fa-2x" id="iduciPotez"></i>
+              <i class="fas fa-fast-forward fa-2x" id="posljednjiPotez"></i>
+
+              <!-- <button id="prviPotez">&lt;&lt;</button>
               <button id="prethodniPotez">&lt;</button>
               <button id="iduciPotez">&gt;</button>
-              <button id="posljednjiPotez">&gt;&gt;</button>
+              <button id="posljednjiPotez">&gt;&gt;</button> -->
             </div>
           </div>
         </div>

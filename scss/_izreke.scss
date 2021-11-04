@@ -60,6 +60,17 @@
   margin-top: 3em;
 }
 
+#generirajIzreku {
+  cursor: pointer;
+  background-color: $bojaPozadineUspjeh;
+  border: none;
+  padding: 1.3em;
+  font-size: 1rem;
+  border-radius: 1em;
+  margin-top: 2em;
+  color: $bojaTekstaTamna;
+}
+
 .mjehuricRazmisljanje {
   position: absolute;
   width: 250px;

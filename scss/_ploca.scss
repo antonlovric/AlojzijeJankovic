@@ -141,9 +141,24 @@
   gap: 3em;
 }
 
-button {
+i {
   padding: 10px;
   margin: 10px;
+  cursor: pointer;
+}
+
+.onemoguciGumb {
+  filter: brightness(0);
+}
+
+.navigacijaPoTablici {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 3em;
+  button {
+    padding: 1em;
+  }
 }
 
 .navigacijaKrozPartiju {
