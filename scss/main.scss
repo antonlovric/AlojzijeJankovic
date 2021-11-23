@@ -1,10 +1,7 @@
-@use "./resets";
-@use "./naslovnica";
-@use "./bio";
-@use "./ploca";
-@use "./izreke";
-@use "./navigacija";
-@use "./opcenito";
-@use "./kontakt";
-
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;700&display=swap");
+@use './misc/index.scss' as *;
+@use './naslovnica/index.scss' as *;
+@use './navigacija/index.scss' as *;
+@use './bio/index.scss' as *;
+@use './pregledPartija/index.scss' as *;
+@use './izreke/index.scss' as *;
+@use './kontakt/index.scss' as *;

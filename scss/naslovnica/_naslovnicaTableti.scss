@@ -1,0 +1,32 @@
+@use '../misc/variables' as *;
+@media (max-width: $srednjiUredaji) {
+  .naslov {
+    font-size: 5rem;
+  }
+
+  .podnaslov {
+    font-size: 3rem;
+  }
+  #naslovnica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .navigacija {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 2em;
+      a {
+        text-align: center;
+        font-size: 25px;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:focus-within {
+          background-color: #b8b6b4;
+          color: black;
+        }
+      }
+    }
+  }
+}

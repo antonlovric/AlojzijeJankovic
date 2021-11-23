@@ -1,0 +1,17 @@
+@use '../misc/variables' as *;
+@media screen and (max-width: 900px) {
+  .pretinacAvatar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+  }
+  .avatar {
+    margin: 0;
+  }
+  .mjehuricRazmisljanje {
+    margin: auto;
+  }
+}

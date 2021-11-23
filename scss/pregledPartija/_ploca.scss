@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use '../misc/variables' as *;
 
 #pregledPartija {
   background-color: $bojaPozadine;
@@ -156,6 +156,7 @@ i {
   align-items: center;
   gap: 2em;
   margin-bottom: 3em;
+  margin-top: 3rem;
   button {
     padding: 1em;
   }
@@ -189,39 +190,4 @@ footer {
   bottom: 0;
   text-align: center;
   width: 100%;
-}
-
-@media (max-width: $maliUredaji) {
-  .uvodPregleda {
-    width: 80%;
-  }
-  #tablica {
-    th {
-      font-size: 0.7rem;
-    }
-    td {
-      font-size: 0.7rem;
-    }
-  }
-
-  .podaci {
-    width: 20rem;
-    font-size: 1rem;
-    height: 10rem;
-  }
-
-  .pretinacPodataka {
-    margin: auto;
-
-    .pretinacPloce {
-      h2 {
-        margin-bottom: 1em;
-      }
-      margin-top: 1em;
-      padding-bottom: 1em;
-    }
-  }
-  .plocaIPotezi {
-    flex-direction: column;
-  }
 }

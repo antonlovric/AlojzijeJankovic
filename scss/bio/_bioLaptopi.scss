@@ -1,0 +1,71 @@
+@use '../misc/variables' as *;
+@media screen and (max-width: 900px) {
+  .opis {
+    width: 400px;
+    height: 400px;
+    font-size: 1rem;
+    margin-bottom: 8em;
+    h2 {
+      font-size: 2rem;
+    }
+    .crtaIspodPodnaslova {
+      width: 10rem;
+    }
+  }
+
+  .crtaIspodNaslovaBio {
+    width: 7rem;
+    height: 0.3em;
+    background-color: $bojaPozadineUspjeh;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 5em;
+  }
+  .pretinac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .okvirZaSlike {
+    width: 400px;
+    height: 400px;
+  }
+  .pretinacUspjeha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      margin: auto;
+      width: 350px;
+      height: auto;
+    }
+    ul {
+      margin: auto;
+      width: 20rem;
+      li {
+        font-size: 1.1rem;
+        width: 22rem;
+      }
+    }
+  }
+
+  .pretinacUspjehaInverz {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    img {
+      width: 350px;
+      height: auto;
+      margin: auto;
+    }
+    ul {
+      margin: auto;
+      width: 20rem;
+      li {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

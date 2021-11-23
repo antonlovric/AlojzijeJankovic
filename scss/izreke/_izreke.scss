@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use '../misc/variables' as *;
 #generatorIzreka {
   color: $bojaTekstaSvijetla;
   text-align: center;
@@ -96,64 +96,4 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 100%;
-}
-
-@media screen and (max-width: 900px) {
-  .pretinacAvatar {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    margin: auto;
-  }
-  .avatar {
-    margin: 0;
-  }
-  .mjehuricRazmisljanje {
-    margin: auto;
-  }
-}
-
-@media (max-width: $maliUredaji) {
-  .opisCitati {
-    line-height: 1.5;
-    letter-spacing: 0.4px;
-    font-size: 1.2rem;
-    width: 70vw;
-    margin: auto;
-    text-align: justify;
-    margin-bottom: 0.7em;
-  }
-  .avatar {
-    width: 300px;
-  }
-
-  .mjehuricRazmisljanje {
-    width: 220px;
-    left: auto;
-    position: relative;
-  }
-
-  .tekstIzreke {
-    font-size: 10px;
-    padding: 10px;
-  }
-
-  .pretinacIzreke {
-    text-align: center;
-    display: none;
-    width: 100%;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    position: relative;
-    p {
-      width: 100%;
-      font-size: 0.9rem;
-    }
-    #izreka {
-      width: 100%;
-      font-size: 0.9rem;
-    }
-  }
 }

@@ -1,0 +1,44 @@
+@use '../misc/variables' as *;
+@media (max-width: $maliUredaji) {
+  .naslovPregleda {
+    padding: 3rem 1rem 0 1rem;
+    font-size: 2.5rem;
+  }
+  .uvodPregleda {
+    width: 80%;
+  }
+  #tablica {
+    th {
+      font-size: 0.7rem;
+    }
+    td {
+      font-size: 0.75rem;
+    }
+  }
+
+  .podaci {
+    width: 20rem;
+    font-size: 1rem;
+    height: 10rem;
+  }
+
+  .pretinacPodataka {
+    margin: auto;
+
+    .pretinacPloce {
+      h2 {
+        margin-bottom: 1em;
+      }
+      margin-top: 1em;
+      padding-bottom: 1em;
+    }
+  }
+  #ploca {
+    position: relative;
+    left: -0.5rem;
+  }
+  .plocaIPotezi {
+    flex-direction: column;
+    gap: 1.4em;
+  }
+}
