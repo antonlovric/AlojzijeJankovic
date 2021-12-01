@@ -151,15 +151,23 @@ i {
   filter: brightness(0);
 }
 
+.brojStranice {
+  margin: auto 1.5rem;
+}
+
 .navigacijaPoTablici {
-  display: flex;
-  align-items: center;
-  gap: 2em;
   margin-bottom: 3em;
   margin-top: 3rem;
   button {
-    padding: 1em;
+    padding: 1.5em;
   }
+}
+
+.navigacijaTablice {
+  // background: none;
+  border-radius: 50%;
+  border: none;
+  color: black;
 }
 
 .navigacijaKrozPartiju {
